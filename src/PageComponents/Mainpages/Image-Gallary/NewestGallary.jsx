@@ -5,7 +5,7 @@ import LoadingModal from "../../modals/LoadingModal";
 export default function NewestGallary(){
     const API_URL_GALLERY = import.meta.env.VITE_GALLERY_URL
 
-
+// filter gallary through backend then render requests conditionally
     const [data,setData] = useState([])
     const [loading,setLoading] = useState(false)
     

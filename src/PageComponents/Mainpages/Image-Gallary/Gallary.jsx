@@ -6,6 +6,7 @@ import Images from './Images.jsx'
 import { useEffect, useState } from 'react'
 export default function ImageGallary(){
 
+    
 
     const [GallaryData,setGallary] = useState([])
      
