@@ -1,0 +1,121 @@
+.Dashboard-layout{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    align-items: start;
+    margin-top:-15rem ;
+    margin-left: 24%;
+    
+}
+
+.blog-panel{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    margin-top: 2rem;
+    border-style: solid;
+    border-radius: 10px;
+    border-color:black;
+    padding: 5%;
+    width: 20rem;
+    height: 20rem;
+    gap: 2rem;
+}
+.blog-date{
+ font-size: small;
+}
+
+.adminName{
+ font-size: large;
+ 
+ font-family: sans-serif;
+ color: rgb(19, 19, 36);
+}
+ 
+.dashboard{
+    border-radius: 10px;
+    padding: 5%;
+    width: 50%;
+    height: 30rem;
+     background-color: rgb(86, 122, 153);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.dashboard-blocks{
+    margin-top: 4rem;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 40%;
+    height: 15rem;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0px 3px 6px 4px #95a7da;
+}
+
+.dashboard-blocks:hover{
+  transition: 0.2s ease-in-out ;
+    transform: scale(1.1);
+}
+.dashblog-stats:hover{
+      transition: 0.2s ease-in-out ;
+    transform: scale(1.1);
+}
+.bar-chart{
+   
+     
+}
+
+.dashblog-stats{
+    
+    margin-top: 4rem;
+     font-weight: bold;
+    border-radius: 10px;
+      width: 40%;
+    height: 15rem;
+    padding: 10px;
+    background-color: rgb(250, 250, 250);
+     box-shadow: 0px 3px 6px 4px #95a7da;
+}
+
+.blogNumber{
+    color: darkblue;
+    font-size: 3rem;
+}
+
+
+
+@media screen and (max-width:600px) {
+    .Dashboard-layout{
+        align-items: center;
+         margin-left: 0.5%;
+        height: 100%;
+        min-height: 100vh;
+        margin-top: 0rem;
+    }
+    .dashboard{
+        height: 80%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .dashblog-stats{
+        margin-top: 0rem;
+        width: 18rem;
+    }
+    .dashboard-blocks{
+        margin-top: 0rem;
+        width: 18rem;
+    }
+}
+
+@media screen and (min-width:1100px) and (max-width:1500px){
+ .dashboard{
+    width: 60%;
+ }
+ }

@@ -1,0 +1,16 @@
+.wrapper{
+ margin-bottom: 5%;
+}
+.see-more{
+text-decoration: none;
+font-family: 'inter',sans-serif;
+color: rgb(81, 84, 211);
+font-size: 1.6rem;
+
+}
+
+@media screen and (max-width:700px) {
+    .wrapper{
+        margin-left: 0%;
+    }
+}

@@ -1,0 +1,10 @@
+.FileInput{
+    display: none;
+}
+
+.prev-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}

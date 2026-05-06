@@ -1,0 +1,144 @@
+
+.page{
+  width: 100%;
+  display: inline-block;
+
+}
+
+.loading-modal{
+    align-items: center;
+}
+
+.categories{
+  margin-top:1% ;
+    display: flex;
+    min-height: 80vh;
+    width: 100%;
+     background-color: rgb(250, 250, 250);
+    flex-direction: column;
+
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 5%;
+}
+.header-wrapper{
+ margin-left: 3.4%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.categories-h1{
+  font-family: 'Inter',sans-serif;
+  color: black;
+}
+.c-Link{
+  
+ text-decoration: none;
+}
+.c-h1{
+  font-family: sans-serif;
+  border-radius: 10px;
+  padding: 9px;
+  background-color:  rgb(250, 250, 250);
+    width: fit-content;
+    color: black;
+    font-weight: 700;
+  font-size: 2rem;
+   margin-top: 10rem;
+    transition: all 0.3s ease-in-out;
+}
+.c-h1:hover{
+
+  
+    transform: scale(1.4);
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-container{
+    border-style: solid;
+     margin-top: 1rem;
+   
+    border-radius: 4px;
+    border-width: 3px;
+    width: 50%;
+    height: 30rem;
+    background-image: url('https://res.cloudinary.com/dciywsh4y/image/upload/v1770607803/IMG_20260208_153634_996_1_v79xiv.png');
+    background-size: cover;
+    
+}
+.c-container1{
+   border-style: solid;
+    border-radius: 4px;
+    border-width: 3px;
+     width: 50%;
+    height: 30rem;
+ background-image:url('https://res.cloudinary.com/dciywsh4y/image/upload/v1770607792/IMG_20260208_153308_008_1_ho7ilt.png');
+ background-size: cover;
+}
+.c-container2{
+   
+    border-radius: 4px;
+    border-width: 3px;
+    border-style: solid;
+     width: 50%;
+    height: 30rem;
+background-image: url('https://res.cloudinary.com/dciywsh4y/image/upload/v1770608635/IMG_20260208_152854_085_1_dpi3tl_eoqs1f.png');
+background-size:cover;
+}
+
+@media screen and (max-width:600px) {
+  .header-wrapper{
+   margin-left: 40px;
+  }
+.categories{
+  margin-top: 10%;
+}
+
+.c-container{
+
+    width: 50%;
+    height: 10rem;
+}
+  .c-container1{
+    height: 50%;
+    height: 10rem;
+  }
+  .c-container2{
+     height: 50%;
+    height: 10rem;
+  }
+  .c-h1{
+     font-size: small;
+      margin-top: 7rem;
+  }
+}
+@media screen and (max-width: 1180px) {
+ .c-container{
+    width: 80%;
+    height: 14rem;
+}
+  .c-container1{
+    width:80%;
+    height: 14rem;
+  }
+  .c-container2{
+     width: 80%;
+    height: 14rem;
+  }
+ 
+}
+@media only screen
+  and (device-width: 768px)
+  and (device-height: 1024px)
+  and (-webkit-device-pixel-ratio: 2) {
+  /* iPad mini portrait */
+  .c-h1{
+    margin-top: 6em;
+   font-size: 1.6rem;
+  }
+}

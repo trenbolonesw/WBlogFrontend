@@ -1,0 +1,117 @@
+.options-Button{
+  cursor: pointer;
+ font-size: 4rem;
+ padding: 0px;
+}
+
+.delete-modal{
+    gap: 1rem;
+     position: fixed;
+     left: 50%;
+ bottom: 0%;
+  width: 10rem;
+  height: 13.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   background-color: lightblue;
+   padding: 1rem;
+   border-style: solid;
+   border-radius: 4px;
+   padding-top: 1rem;
+ opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.delete-modal.show{
+ opacity: 1;
+    display: flex;
+   transform: translate(-50%, 0);
+}
+.delete-modal.hide{
+ 
+  opacity: 0;
+  transform: translate(-50%, 40px);
+  pointer-events: none;
+}
+.main-delete{
+  font-size: small;
+  width: 6.2rem;
+  height:3rem;
+  background-color: red;
+}
+
+
+.cancel-delete{
+    width: 5rem;
+ background-color: green;
+}
+.delete{
+    width: 5rem;
+ background-color: red;
+}
+
+
+
+.options-button:hover{
+  text-decoration: none;
+}
+.options-tab{
+  gap: 4px;
+  position: fixed;
+ right: 20%;
+ bottom: 50%;
+  width: 10rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   background-color: lightblue;
+   padding: 1rem;
+   border-style: solid;
+   border-radius: 4px;
+   padding-top: 1rem;
+    transform: translateY(40px);
+ transition: opacity 0.3s ease, transform 0.3s ease-in;
+}
+.options-tab.hide {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(40px);
+  pointer-events: none;
+}
+
+.options-tab.show{
+opacity: 1;
+    display: flex;
+    transform: translateY(31px);
+    pointer-events: auto;
+}
+
+.options{
+  border-style: solid;
+  border-radius: 7px;
+  text-decoration: none;
+  color:white;
+  background-color: blue;
+  width: 6.2rem;
+  height: 3rem;
+}
+
+.options.small{
+ height: 2.2rem;  /* or whatever smaller size you want */
+  width: 4rem;
+  font-size: 0.85rem;
+  color:black;
+  background-color: white;
+}
+
+.options.edit-link{
+   display: flex;
+  align-items: center;   
+  justify-content: center; 
+   line-height: 1;         
+  vertical-align: middle; 
+
+
+}

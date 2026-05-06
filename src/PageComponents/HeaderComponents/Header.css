@@ -1,0 +1,68 @@
+
+
+
+.Header {
+ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 10vh;
+  background-color: black;
+
+  padding: 1rem 3% 1rem 3.4%;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 1000;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+
+
+.space-nav{
+    display: inline-block;
+    margin-left: 27%;
+ 
+}
+
+
+.logo{
+    margin-right: 60%;
+    width: 4rem;
+    height: 4rem;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:700px) {
+  
+   .logo {
+  width: 3rem;
+  height: 4rem;
+}
+
+.space-nav {
+  display: flex;
+  align-items: center;
+}
+    .Header{
+       z-index: 1;
+       font-size: 8px;
+       justify-content: space-between;
+       gap: 3rem;
+       height: 4rem;
+      
+    }
+   
+}

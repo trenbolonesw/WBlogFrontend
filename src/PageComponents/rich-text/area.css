@@ -1,0 +1,109 @@
+.ProseMirror{
+     background-color: rgb(166, 173, 185);
+  padding: 10px;
+
+  width: 80%;
+ margin: auto;
+
+  height: 30rem;
+
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  line-height: 1.5;
+ text-align: start;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.ProseMirror p{
+  margin: 0.5em 0;
+  line-height: 20px;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3{
+  margin: 0.8em 0 0.4em 0;
+}
+
+.div{
+    width: 100%;
+}
+.highlight{
+  
+    border-style: solid;
+    border-color: rgb(150, 161, 108);
+    background-color: yellow;
+}
+.editor-button{
+    height: 3rem;
+ background-color: rgb(143, 147, 151);;
+}
+.emoji-button{
+    font-size: small;
+      height: 3rem;
+ background-color: rgb(143, 147, 151);;
+}
+.editor-menu{
+    padding: 10px;
+    box-shadow: 3 0 3 blue;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    background-color: rgb(143, 147, 151);
+    width: 70%;
+    height: 4rem;
+ margin-bottom: 1rem;
+    border-style: solid;
+    border-color: rgb(166, 173, 185);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+ .TextArea-mobile{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  
+
+
+
+ .ProseMirror{
+    line-height: 10px;
+    width: 100%;
+    height: 20rem;
+ }
+ .editor-button{
+    height: 2rem;
+    font-size: 6px;
+ }
+ .editor-menu{
+    
+    width: 90%;
+    height: 7rem;
+
+ }
+}
+@media screen and (min-width: 700px) and (max-width:900px) {
+    .ProseMirror{
+      
+        width: 90%;
+    }
+    .editor-menu{
+     
+        width: 90%;
+    }
+    .editor-menu{
+       gap: 2px;
+    }
+    .editor-button{
+        font-size: 14px;
+    }
+}

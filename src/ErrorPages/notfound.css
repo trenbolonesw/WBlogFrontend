@@ -1,0 +1,21 @@
+.pagee{
+   
+    background-image: url('https://preview.redd.it/1920x1080-wheat-field-v0-s41s0fosg2cb1.jpg?auto=webp&s=c09845e5459297682aa36f963bac6bafe5b76563');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   width: 100%;
+ height: 99vh;
+    padding: 20%;
+    background-color: skyblue;
+    margin-top: -10%;
+    color: rgb(255, 255, 255);
+}
+.nf-wrapper{
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+background-color:rgba(0, 0, 0, 0.5)
+}
+

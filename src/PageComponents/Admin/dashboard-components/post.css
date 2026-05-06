@@ -1,0 +1,29 @@
+
+.posts-page{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+   
+    justify-content: center;
+}
+
+.Options{
+    cursor: pointer;
+    font-size: 2rem;
+    margin-left: 80%;
+}
+
+.options-menu{
+    padding: 2px;
+    left: 65%;
+    top:50%;
+    position: absolute;
+    background-color: forestgreen;
+    width: 5rem;
+    height: 8rem;
+    border-style: solid;
+    border-color: green;
+    border-radius: 4px;
+}
+

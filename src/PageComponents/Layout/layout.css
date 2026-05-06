@@ -1,0 +1,23 @@
+.Layout {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10.5rem; 
+}
+
+.backdrop{
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+@media screen and (max-width:600px) {
+   .Layout{
+      padding-top: 60px
+   }
+}
+

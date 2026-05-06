@@ -1,0 +1,19 @@
+.emoji-menu{
+     background-color: rgb(143, 147, 151);
+     margin: auto;
+   
+width: fit-content;
+ margin-bottom: 1rem;
+ margin: auto;
+ border-radius: 10px;
+}
+
+@media screen and (max-width:600px) {
+
+}
+
+@media screen and (min-width: 1000px)and (max-width:1400px){
+   .emoji-menu{
+    
+   }
+}

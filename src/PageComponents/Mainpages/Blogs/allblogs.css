@@ -1,0 +1,43 @@
+
+
+.all-blogs {
+  max-width: 1600px; /* or 1100px, whatever looks good */
+  margin-left: auto;
+  margin-right: auto;
+
+    margin-bottom:5% ;
+}
+.Header-wrapper{
+  width: 100%;
+   margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.sort-wrapper{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  height: 10rem;
+}
+@media screen and (max-width:600px) {
+  .back-button{
+    width: 3rem;
+  }
+  .Header-wrapper{
+    width: 60%;
+    margin-right: 25%;
+  }
+  .all-blogs{
+
+  
+    margin-top: 10%;
+    margin-bottom:10% ;
+   
+  }
+  .sort-wrapper{
+    margin-bottom: 1.5rem;
+  }
+}
