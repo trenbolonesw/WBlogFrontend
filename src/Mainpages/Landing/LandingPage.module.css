@@ -1,0 +1,114 @@
+
+.Landing{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+   justify-content: center;
+
+
+}
+
+.Hero{
+  height: 90vh;
+  padding-left: 100px;
+  padding-right: 100px;
+  overflow: hidden;
+ background-image: url('../../assets/images/froghero.png');
+ background-repeat: no-repeat;
+ background-size: cover;
+
+}
+.heroFlex{
+  margin-top:15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+}
+.left{
+  text-align: start;
+  width: 30%;
+  margin-right: auto;
+  align-items: start;
+}
+
+.right{
+ margin-left: auto;
+}
+
+
+
+.topFlags{
+   display: flex;
+   gap: 10px;
+}
+
+
+.workFlag{
+    text-decoration: none;
+    font-size: 1.5rem;
+  
+}
+
+.workFlag,
+.leftFlag,
+.rightFlag,
+.flag{
+    color: white;
+
+    border-radius: 10px;
+    width: fit-content;
+    background-color: rgb(48, 60, 84);
+    padding: 6px;
+    font-family: 'IBM Plex Sans', sans-serif;
+     font-weight: 400;
+}
+
+.rightFlag{
+  background-color: rgb(126, 60, 24);
+}
+
+.h1{
+  font-size: 5rem;
+}
+
+.h1,
+.hero,
+font{
+  color: white;
+     font-family: 'IBM Plex Sans', sans-serif;
+     font-weight: 600;
+}
+
+.h3{
+margin-top: -2rem;
+}
+
+.h3,
+.fonth3{
+   color: white;
+     font-family: 'IBM Plex Sans', sans-serif;
+     font-weight: 400;
+     font-size: 2rem;
+}
+
+.heroImage{
+   border-radius: 10px;
+  border-style: solid;
+  box-shadow: inset 1 -3px 3px rgb(85, 85, 56);
+  width: 50rem;
+}
+
+
+.newBlogs{
+ height: 40%;
+}
+
+
+
+@media screen and (min-width: 700px) and (max-width:1100px) {
+ .hero{
+  
+  margin-top: -15%;
+}
+}

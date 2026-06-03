@@ -1,0 +1,31 @@
+.dropdown-list{
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0 0 12px 12px;
+
+    position: absolute;
+  margin-top: 3rem;
+  width: 7rem;
+  padding: 3px;
+  background-color: black;
+  
+}
+
+.c-link{
+    font-size: medium;
+    text-decoration: none;
+    color: rgb(38, 114, 230);
+}
+
+
+@media screen and (max-width:600px) {
+    .dropdown-list{
+      background-color: transparent;
+        border-style: none;
+        position: relative;
+        margin-top: 0;
+      left: 22%;
+      
+    }
+}

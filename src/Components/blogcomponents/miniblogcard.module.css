@@ -1,0 +1,150 @@
+.contentWrapper{
+      padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
+.articleWrapper{
+ padding-bottom: 3rem;
+}
+
+
+.dateWrapper{
+      margin-top: auto;   /* MAGIC LINE */
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+.blogTitle{
+   
+        
+        font-size: medium;
+        font-weight: 700;
+
+        
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+      
+    }
+
+    .blogsArticle{
+      display: -webkit-box;
+  -webkit-line-clamp: 2;      /* number of lines allowed */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+        font-size: 12px;
+    
+          font-weight: 700;
+          margin-bottom: 10px;
+         white-space: pre-wrap;
+      opacity: 0.9;
+    }
+    .blogsDetails{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        font-size: small;
+        gap: 5px;
+        }
+    .blogsDate{
+         
+          font-size: 11px;
+          font-weight: 400; 
+     
+    }
+
+
+.itemSection {
+   
+
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: 500;
+  box-sizing: border-box;
+  margin: 0;
+  align-self: start;   
+  text-align: start;
+}
+
+
+
+
+.blogsImage{
+     aspect-ratio: 16 / 9;  
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-bottom: 10px;
+    
+}
+
+
+.readMore{
+   
+    text-decoration: none;
+    color: black;
+}
+
+    .blogsCategory{
+         font-weight: 500;
+        font-size: small;
+        margin-top: 0px;
+         border-radius: 10px;
+    width: fit-content;
+    color: white;
+    background-color: rgb(48, 60, 84);
+    height: 1%;
+    padding: 3px;
+       
+    }
+
+    .blogTitle,
+  .blogsCategory,
+  .blogsDate,
+  .blogsArticle,
+    .font{
+            font-family: 'IBM Plex Sans', sans-serif;
+          
+    }
+    
+
+
+    @media screen and (max-width:600px) {
+        .readMore{
+        border-style: none;
+      
+     
+    }
+    
+   
+    .blogsArticle{
+        font-weight: 400;
+    }
+    .blogsDetails{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        font-size: small;
+        gap: 5px;
+        
+    }
+   
+    .blogsDate{
+         font-style: italic; 
+    }
+    .blogsCategory{
+        font-weight: 700;
+    }
+    }

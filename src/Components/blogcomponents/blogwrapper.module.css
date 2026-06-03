@@ -1,0 +1,14 @@
+.propPage{
+      max-width: 1600px; /* or 1100px, whatever looks good */
+  margin-left: auto;
+  margin-right: auto;
+margin-bottom:5% ;
+
+}
+
+.headerWrapper{
+     margin-left: 3.4%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
