@@ -22,7 +22,7 @@ export default function LandingPage(){
                     </div>
                  </div>  
             </section>
-            <section className={styles.newPosts}>
+            <section className={styles.newBlogs}>
          <NewestBlogs/>
             </section>
             <section className={styles.newGallary}>

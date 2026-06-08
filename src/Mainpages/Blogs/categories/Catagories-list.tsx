@@ -1,12 +1,15 @@
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import './list.css'
 import '../../../Components/blogcomponents/blogs.css'
 import { useState,useEffect } from 'react'
-import BlogItem from '../../../Components/blogcomponents/blogitem'
+import BlogWrapper from '../../../Components/blogcomponents/Blog-pages-wrapper'
 import LoadingModal from '../../../Components/modals/LoadingModal'
 import Pagination from '../../../Components/shared/components/Pagination/Pagination'
 import { Blog } from '../../../Types/Blog-Data-types'
 import { useSearchParams } from 'react-router-dom'
+import MiniBlogCard from '../../../Components/blogcomponents/miniblogcard'
+import MiniNavBar from '../../../Components/shared/components/Navigation/MiniNavBar'
+
 export default function CategoriesList(){
 const {categoryName} = useParams()
  const [blogs,setBlogs] = useState<Blog[]>([])
@@ -60,28 +63,24 @@ const currentPage = Number(searchParams.get("page") || 1 ) -1
 
     return(
         <>
+        <BlogWrapper title={`${categoryName} Blogs`}>
+       <MiniNavBar/>
         
-        <div className='list-container'>
-            <Pagination searchParams={searchParams} setSearchParams={setSearchParams} pageCount={pageCount}/>
            <div className='header-wrapper'>
                       
-            <h1 className='categories-h1'>
-                {categoryName} Blogs
-            </h1>
+            
                        </div>
           
             <div className='category-list'>
             {loading && <div className='loading-modal'><LoadingModal/></div> }
       {!loading && blogs?.length > 0 && (
-        <BlogItem 
-           Blogs={blogs}
-          />
+       <MiniBlogCard Blogs={blogs}/>
       )}
          {!loading && blogs?.length === 0 && (<h1>No blogs for this category yet</h1>)}
           
         </div>
-        
-        </div>
+ <Pagination searchParams={searchParams} setSearchParams={setSearchParams} pageCount={pageCount}/>
+        </BlogWrapper>
         </>
     )
 }

@@ -87,7 +87,7 @@ const categoryDropRef = useRef(null)
            
     return(
         <>
-        {drop && <div className="backdrop" onClick={closeMenu}></div>}
+        {drop && <div className="backdrop" ></div>}
         <div className="PcMenu" >
             <NavLink to="/" className="Link">Home</NavLink>
             <div className="Category-nav-pc">
@@ -117,7 +117,7 @@ const categoryDropRef = useRef(null)
          
               <div className="Category-nav-mobile">
             <Button onClick={() => setCategorymobile(prev => !prev)} cssClass={categorymobile ? "Category-Link-active":"Category-Link"}>Categories</Button>
-            {categorymobile ? <Categories ref={null}/> : null}
+            {categorymobile ? <Categories onClick={closeMenu}  /> : null}
             </div>
             <NavLink to="/Blogs" className="mobile-link" onClick={closeMenu}>All Blogs</NavLink>
             {/* <NavLink to="applesg10" className="mobile-link">login</NavLink> */}

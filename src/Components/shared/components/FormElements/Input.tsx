@@ -1,4 +1,5 @@
 import {  InputHTMLAttributes, TextareaHTMLAttributes } from "react"
+import styles from './Input.module.css'
 
  interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   placeHolder:string,
@@ -11,26 +12,26 @@ interface TextArea extends TextareaHTMLAttributes<HTMLTextAreaElement>{
  register:Object,  
 error:string|undefined
 }
-export function Input({className,register,error,type,placeHolder}:InputProps){
+export function Input({register,error,type,placeHolder}:InputProps){
     
   
     
     
           return(
             <>
-          <input placeholder={placeHolder} type={type} className={className} {...register} />
-         {error && <p>{error}</p>}
+          <input placeholder={placeHolder} type={type} className={styles.input} {...register} />
+         {error && <p className={styles.error}>{error}</p>}
           </>
     )
     
    
 }
 
-export function TextArea({className,placeHolder,error,register,rows}:TextArea){
+export function TextArea({placeHolder,error,register,rows}:TextArea){
       return (
         <>
-        <textarea rows={rows} className={className} placeholder={placeHolder} {...register}/>
-        {error && <p>{error}</p>}
+        <textarea rows={rows} className={styles.textarea} placeholder={placeHolder} {...register}/>
+        {error && <p className={styles.error}>{error}</p>}
         </>
       )
 }

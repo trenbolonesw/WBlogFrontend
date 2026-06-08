@@ -5,76 +5,97 @@ import { AuthContext } from '../../Components/shared/context/auth-context'
 import { useContext } from 'react'
 import '../../Components/AdminComponents/auth.css'
 import ImagePicker from '../../Components/shared/components/ImagePicker/Imager-Picker'
+import {SignInSchema} from "../../models/userSchema"
+import z from "zod"
+import {SubmitHandler,useForm} from 'react-hook-form'
+import {zodResolver} from '@hookform/resolvers/zod'
+import AuthWrapper from "../../Components/shared/components/UIElements/auth-wrapper";
+import { Input } from "../../Components/shared/components/FormElements/Input";
+import { HttpHook } from '../../Components/shared/hooks/http-hook'
 export default function SignIn(){
-const auth = useContext(AuthContext)
-    const API_URL= import.meta.env.VITE_ADMIN_URL
- const navigate = useNavigate()
+ type UserArray = z.infer<typeof SignInSchema>
+  const {
+    setValue,
+    control,
+ register,
+ handleSubmit,
+ formState:{errors}
+  } = useForm<UserArray>({
+    resolver:zodResolver(SignInSchema)
+  })
 
     const [image,setImage] = useState<Blob|null>(null)
-    const [name,setName] = useState('')
-    const [email,setEmail] = useState('')
-    const [password,setPassword] = useState('')
-    const [error,setError] = useState(false)
-    const [success,setSuccess] = useState(false)
-  async function submitHandler(event){
-    event.preventDefault()
    
-         const formData = new FormData()
 
-    formData.append('name',name)
-    formData.append('email',email)
-    formData.append('password',password)
+   
 
+
+useEffect(() => {
   if(image){
-  formData.append('image',image)
+
+  setValue('image',image,{shouldValidate:true,shouldDirty:true})
   }
+ },[setValue,image])
 
-     try{
-     const res= await fetch(`${API_URL}signin`,{
-        method:"POST",
-        body:formData
-    
-    })  
-    const result = await res.json()
-    if(!res.ok){
-         setError(true)
         
-    } else{
-        console.log(result.token)
-        auth.login(result.userId,result.token)
-        setSuccess(true)
-         const id = result.userId
-  navigate(`/g10mtK/${id}`)
-    }
-   
+  
+
+
+
+ 
+const navigate = useNavigate()
+
+ 
+const {isLoading,error,SendRequest} = HttpHook()
+
+
+ const API_URL= import.meta.env.VITE_ADMIN_URL
+
+ const auth = useContext(AuthContext)
+const onSubmit:SubmitHandler<UserArray> = async(data) => {
+ try{
+           const formData = new FormData()
+
+    formData.append('name',data.userName)
+    formData.append('email',data.email)
+    formData.append('password',data.password)
+  formData.append('image',data.image)
+  
+
+        const response = await SendRequest(`${API_URL}signin`,
+          'POST',
+       formData,
     
-     }catch(e){
-        console.log(e)
-     }
+            )
+           
+        
+          auth.login(response.userId,response.token)
+          const id = response.userId
+            navigate(`/g10mtK/${id}`)
+          
 
-
- }
+  }catch(e){
+    console.log(e)
+      } 
+}
   
 
     return(
         <>
-        {error && <h1>something went wrong..</h1>}
-        <form className='form' onSubmit={submitHandler}>
-            <label>UserName</label>
-            <input type="text" placeholder="noobmaster" className='input' 
-            onChange={(e) => setName(e.target.value)}/>
-             <label>Email</label>
-            <input type="text" placeholder="example@gmail.com" className='input'
-            onChange={(e) => setEmail(e.target.value)}
+        <AuthWrapper title='Sign Up' error={error} loading={isLoading} onSubmit={handleSubmit(onSubmit)}>
+           
+            <Input error={errors.userName?.message} type="text" placeHolder="noobmaster"
+            register={{...register("userName")}}/>
+            
+            <Input error={errors.email?.message} type="text" placeHolder="example@gmail.com" 
+            register={{...register('email')}}
             />
-            <label>Password</label>
-            <input placeholder="password" type="password" className='input'
-             onChange={(e) => setPassword(e.target.value)}
+           
+            <Input error={errors.password?.message} placeHolder="password" type="password" 
+              register={{...register('password')}}
             />
-               <ImagePicker setImage={setImage} image={image}/> 
-        <button>Create Admin</button>
-        </form>
-        {success && <h1>Success!</h1>}
+               <ImagePicker error={error} setImage={setImage} image={image}/> 
+    </AuthWrapper>
         </>
     )
 }

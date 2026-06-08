@@ -14,7 +14,6 @@ export default function BlogWrapper({children,title}:PageProps){
         <div className={styles.propPage}>
             <div className={styles.headerWrapper}>
                 <h1>{title}</h1>
-                
                 </div>
          {children}
         </div>

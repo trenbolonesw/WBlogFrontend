@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+
 }
 
 
@@ -40,7 +41,7 @@
   overflow: hidden;
         font-size: 12px;
     
-          font-weight: 700;
+          font-weight: 500;
           margin-bottom: 10px;
          white-space: pre-wrap;
       opacity: 0.9;
@@ -63,10 +64,10 @@
 .itemSection {
    
 
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   border-radius: 10px;
   font-weight: 500;
   box-sizing: border-box;
@@ -127,7 +128,10 @@
       
      
     }
-    
+    .itemSection{
+        align-items: center;
+        justify-content: center;
+    }
    
     .blogsArticle{
         font-weight: 400;

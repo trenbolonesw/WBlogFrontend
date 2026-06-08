@@ -1,0 +1,10 @@
+.mini-navbar{
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+
+.C-link{
+text-decoration: none;
+}

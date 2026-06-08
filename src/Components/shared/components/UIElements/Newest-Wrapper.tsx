@@ -1,15 +1,25 @@
 import { NavLink } from "react-router-dom"
-import { pageProps } from "../../../../Types/shared-types"
 import './newestwrapper.css'
-import { Blog } from "../../../../Types/Blog-Data-types"
-import XLBlogCard from "../../../blogcomponents/XlBlogCard"
 
-interface Newest extends pageProps{
-  url:string,
-  leftCard:Blog[]
+type NewestGallaryProps<T> = {
+ items:T[];
+  url:string;
+  title:string;
+  renderLeft:(item:T,index:number) => React.ReactNode;
+  children:(items:T[]) => React.ReactNode;
+
 }
 
-export default function NewestWrapper({children,title,url,leftCard}:Newest){
+export default function NewestWrapper<T>({items,title,url,renderLeft,children}:NewestGallaryProps<T>){
+
+    if(items.length === 0){
+      return null
+    }
+
+   const firstItem = items?.[0];
+const secondaryItems = items?.slice(1) ?? [];
+
+
     return(
          <>
     <div className="newest-wrapper">
@@ -19,8 +29,8 @@ export default function NewestWrapper({children,title,url,leftCard}:Newest){
       <NavLink className="view-all" to={url}>View All</NavLink>
     </div>
     <div className="content-section">
-       <XLBlogCard Blogs={leftCard}/>
-       <div className="content-square">{children}</div>
+       {renderLeft(firstItem,0)}
+       <div className="content-square">{children(secondaryItems)}</div>
        </div>
     </div>
     </>

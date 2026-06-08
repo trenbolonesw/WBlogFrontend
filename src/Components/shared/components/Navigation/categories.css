@@ -5,17 +5,17 @@
     border-radius: 0 0 12px 12px;
 
     position: absolute;
-  margin-top: 3rem;
+  margin-top: 4.2rem;
   width: 7rem;
-  padding: 3px;
-  background-color: black;
-  
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: start;
 }
 
 .c-link{
     font-size: medium;
     text-decoration: none;
-    color: rgb(38, 114, 230);
+    color: rgb(224, 224, 224);
 }
 
 

@@ -8,6 +8,7 @@ import ReactPaginate from 'react-paginate'
 import BlogFilter from '../../Components/blogcomponents/BlogFilter'
 import Blogs from '../../Components/blogcomponents/blogs'
 import { Blog } from '../../Types/Blog-Data-types'
+import Pagination from '../../Components/shared/components/Pagination/Pagination'
 export default function AllBlogs(){
     
     const API_URL_BLOGS = import.meta.env.VITE_ALL_BLOGS_URL 
@@ -104,23 +105,8 @@ const [pageCount,setPageCount] = useState<number>(0)
             <BlogWrapper title="All Blogs">
                 <BlogFilter category={category}  handleSearchParams={handleCategory}/>
                     
-                  
-                    <ReactPaginate
-                     breakLabel="..."
-                     previousLabel='prev'
-                     onPageChange={handlePageClick}
-                     nextLabel="next"
-                     pageCount={pageCount}
-                     renderOnZeroPageCount={null}
-                     activeClassName='activepage'
-                     className='paginateContainer'
-                     pageClassName='paginateElement'
-                     nextClassName='next'
-                     previousClassName='prev'
-                     forcePage={pageCount > 0 ? currentPage : undefined}
-                     disableInitialCallback={currentPage === 1}
-                     disabledLinkClassName='paginateDisabled'
-                     />
+                  <Pagination searchParams={searchParams} setSearchParams={setSearchParams} pageCount={pageCount}/>
+                    
                     
                        <Blogs loading={loading} blogs={data}/> 
                      

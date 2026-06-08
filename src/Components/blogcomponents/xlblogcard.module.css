@@ -2,7 +2,6 @@
       padding: 10px;
   display: flex;
   flex-direction: column;
-  flex: 1;
 }
 
 
@@ -22,8 +21,8 @@
 .blogTitle{
    
         font-family: 'Inter',sans-serif;
-        font-size: medium;
-        font-weight: bold;
+        font-size: 22px;
+              font-weight: 700;
 
         
   display: -webkit-box;
@@ -38,9 +37,9 @@
   -webkit-line-clamp: 2;      /* number of lines allowed */
   -webkit-box-orient: vertical;
   overflow: hidden;
-        font-size: 20px;
+        font-size: 15px;
     
-          font-weight: 700;
+          font-weight: 500;
           margin-bottom: 10px;
          white-space: pre-wrap;
       opacity: 0.9;
@@ -63,7 +62,7 @@
 .itemSection {
    
 
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,6 +72,7 @@
   margin: 0;
   align-self: start;   
   text-align: start;
+  cursor: pointer;
 }
 
 
@@ -120,15 +120,41 @@
 
 
     @media screen and (max-width:600px) {
+
+.itemSection {
+   
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: 500;
+  box-sizing: border-box;
+  margin: 0;
+  align-self: start;   
+  text-align: start;
+  cursor: pointer;
+}
+
+
+
+
+
+
         .readMore{
         border-style: none;
       
      
     }
     
+    .blogTitle{
+        font-size: 20px;
+    }
    
     .blogsArticle{
         font-weight: 400;
+        font-size: 12px;
     }
     .blogsDetails{
         display: flex;
@@ -141,6 +167,7 @@
    
     .blogsDate{
          font-style: italic; 
+         font-size: 10px;
     }
     .blogsCategory{
         font-weight: 700;

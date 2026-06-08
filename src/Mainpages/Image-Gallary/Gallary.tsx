@@ -1,21 +1,16 @@
 import './Gallery.css'
 
-import Images from './Images.js'
-import { useEffect, useState } from 'react'
-import BlogWrapper from '../../Components/blogcomponents/Blog-pages-wrapper'
-import { Gallary } from '../../Types/Blog-Data-types'
+import { useEffect, useState } from 'react';
+import BlogWrapper from '../../Components/blogcomponents/Blog-pages-wrapper';
+import { Gallary } from '../../Types/Blog-Data-types';
+import ImageSlideShow from '../../Components/gallary-components/ImageSlideShow';
+
+
+
 export default function ImageGallary(){
 
 
     const [GallaryData,setGallary] = useState<Gallary[]>([])
-     
- 
-    
-    //hello there
-
-
-
-
 
 
 
@@ -23,7 +18,7 @@ const URL = import.meta.env.VITE_GALLERY_URL
 
 useEffect(() => {
 
-//another test
+
 
 async function getImages(){
  try{
@@ -50,10 +45,12 @@ getImages()
 
     return(
         <>
+         
           <BlogWrapper title="Gallary">          
-           
-                <Images gallary={GallaryData}/>
-
+            
+               <ImageSlideShow GallaryData={GallaryData}/> 
+                
+      
         </BlogWrapper>  
         </>
     )

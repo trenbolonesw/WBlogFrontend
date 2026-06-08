@@ -1,9 +1,12 @@
+
+
 .newest-wrapper{
     padding-top: 10%;
  max-width: 2000px;
  padding-left: 100px;
  padding-right: 100px;
  margin: 0 auto;
+
 }
 
 
@@ -15,7 +18,7 @@
     align-items: center;
 }
 
-.newest-h3{
+.Newest-h3{
     font-size: 3rem;
 }
 
@@ -34,13 +37,12 @@
 .view-all,
 .fonts{
      font-family: 'IBM Plex Sans', sans-serif;
-     font-weight: 400;
+     font-weight: 500;
 }
 .content-section{
 width: 100%;
     display: flex;
-    
-   
+  
     gap: 2rem;
 
 }
@@ -54,21 +56,23 @@ width: 100%;
 
 
 
-@media screen and (max-width:600px) {
-   .newest-wrapper{
-    padding-left: 0px;
-    padding-right: 0px;
- 
-   }
-   .content-section{
-    flex-direction: column;
+.heading-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
- 
-   }
-   
-
-   .newest-h3{
-    font-size: 1.5rem;
-   }
 }
 
+@media screen and (max-width:600px) {
+    .newest-wrapper{
+        padding-left: 0px;
+ padding-right: 0px;
+
+    }
+    .content-square{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+ 
+}

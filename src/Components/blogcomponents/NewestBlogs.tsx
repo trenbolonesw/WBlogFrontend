@@ -3,6 +3,7 @@ import { useState,useEffect } from "react";
 import LoadingModal from "../modals/LoadingModal";
 import { Blog } from "../../Types/Blog-Data-types";
 import NewestWrapper from "../shared/components/UIElements/Newest-Wrapper";
+import XLBlogCard from "./XlBlogCard";
 
 export default function NewestBlogs(){
 
@@ -37,18 +38,18 @@ const [loading,setLoading] = useState<boolean>(false);
 
     
 
-const newestBlog = data.slice(0,1)
-const secondaryBlogs = data.slice(1,5)
 
     return(
     <>
 
  
 
-  <NewestWrapper leftCard={newestBlog} title="Newest Blogs" url={'/blogs'}>
+  <NewestWrapper 
+  items={data}
+  renderLeft={(blog) => (<XLBlogCard blog={blog}/>)} title="Newest Blogs" url={'/blogs'}>
  
-
-  <Blogs blogs={secondaryBlogs} loading={loading}/> 
+  
+ {(blogs) => ( <Blogs blogs={blogs} loading={loading}/> )  } 
  
   </NewestWrapper>
 

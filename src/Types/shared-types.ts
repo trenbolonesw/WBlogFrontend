@@ -21,7 +21,7 @@ export interface EditorProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 export interface ImagePickerProps{
     image:Blob|null,
     setImage:React.Dispatch<React.SetStateAction<Blob|null>>
-    error:string|undefined
+    error:string|null
 }
 
 export interface filteredData{
@@ -35,3 +35,10 @@ export interface BlogItemProps{
  loading?:boolean
  
 }
+
+export type SplitLayoutProps<T> = {
+  items: T[];
+  renderFeature: (item: T) => React.ReactNode;
+  renderSide: (items: T[]) => React.ReactNode;
+};
+

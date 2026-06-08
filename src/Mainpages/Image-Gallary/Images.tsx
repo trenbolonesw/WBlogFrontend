@@ -1,14 +1,15 @@
-import { useState } from 'react'
+
 import './Image-Gallery.css'
 import { DateFormatter } from '../../Components/shared/utils/dateFormater';
 import { Gallary } from '../../Types/Blog-Data-types'
 
 type GallaryPhotos = {
-  gallary:Gallary[]
+  gallary:Gallary[],
+  onclick: (index:number) => void
 }
-export default function Images({gallary}:GallaryPhotos){
+export default function Images({gallary,onclick}:GallaryPhotos){
 
-const [fullSizeId, setFullSizeId] = useState(null);
+
 
 console.log(gallary)
 
@@ -17,7 +18,9 @@ console.log(gallary)
   } 
    
 
-
+  function handleimageclick(index:number){
+      onclick(index)
+        }
 
 
 
@@ -28,21 +31,13 @@ console.log(gallary)
     <>
     
     <div className="image-gallery">
-      {gallary.map((data:Gallary) => (
-      <div key={data._id} className="image-card">
+      {gallary.map((data:Gallary,index) => (
+      <div key={index} className="image-card" onClick={() => handleimageclick(index)}>
        
-        <img title={` ${fullSizeId === data._id ?'click away to shrink': 'click for full size'}`}  src={data.Image} className={`${fullSizeId === data._id ?  'full-size':'gallery-image'}`}/>
-         {fullSizeId === data._id && <div className="image-backdrop" onClick={() => setFullSizeId(null)} />}
+        <img src={data.Image} className='gallery-image'/>
         <div className='text-wrapper'>
-        <div className={`${fullSizeId === data._id ?'':'details-wrapper'}`}>
-        
-        <div className='info-card'>
       
-        <div className='date-category'>
-        
-        </div>
-        </div>
-        </div>
+       
         </div>
       </div>
     ))}

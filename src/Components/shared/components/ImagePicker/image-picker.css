@@ -1,6 +1,11 @@
-.default-blog-image{
- height: 10%;
+.blog-default-image{
+ width: 50%;
+ border-radius: 10%;
+ border-style: solid;
+ border-color: rgb(66, 66, 66);
+ 
 }
 .image-input{
     display: none;
+    
 }

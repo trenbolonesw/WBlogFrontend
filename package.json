@@ -28,6 +28,7 @@
     "react-share": "^5.2.2",
     "react-use-websocket": "^4.13.0",
     "recharts": "^3.2.0",
+    "yet-another-react-lightbox": "^3.32.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
