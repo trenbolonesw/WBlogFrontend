@@ -64,7 +64,7 @@
 .itemSection {
    
 
-  width: 50%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -121,7 +121,22 @@
     }
     
 
-
+ @media screen and (max-width:1000px) {
+    .dateWrapper{
+        gap: 2rem;
+        
+    }
+    .blogsDate{
+        font-size: 9px;
+    }
+    .blogsArticle{
+        margin-bottom:0px;
+    }
+    .blogsDetails{
+        gap: 0px;
+    }
+ }
+  
     @media screen and (max-width:600px) {
         .readMore{
         border-style: none;
@@ -131,6 +146,7 @@
     .itemSection{
         align-items: center;
         justify-content: center;
+        width: 70%;
     }
    
     .blogsArticle{
@@ -146,9 +162,15 @@
     }
    
     .blogsDate{
+      
+        margin-top: 4px;
          font-style: italic; 
     }
     .blogsCategory{
         font-weight: 700;
+    }
+
+    .dateWrapper{
+        width: 90%;
     }
     }

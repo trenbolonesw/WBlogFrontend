@@ -1,10 +1,8 @@
-import Images from "../../Mainpages/Image-Gallary/Images";
+
 import { useState,useEffect } from "react";
-import NewestWrapper from "../shared/components/UIElements/Newest-Wrapper";
-import LoadingModal from "../modals/LoadingModal";
-import XLGallaryCard from './XLGallaryCard'
-import ImageSlideShow from "./ImageSlideShow";
+
 import FeaturedSlideShow from "./FeaturedSlideShow";
+import NewestWrapper from "../shared/components/UIElements/Newest-Wrapper";
 export default function NewestGallary(){
     const API_URL_GALLERY = import.meta.env.VITE_GALLERY_URL
 

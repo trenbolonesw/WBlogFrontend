@@ -9,33 +9,37 @@
 }
 
 .Hero{
+ padding-left: 5%;
   height: 90vh;
-  padding-left: 100px;
-  padding-right: 100px;
   overflow: hidden;
  background-image: url('../../assets/images/froghero.png');
  background-repeat: no-repeat;
  background-size: cover;
      padding-bottom: 10rem;
- margin-top: -9%;
+ margin-top:-7rem;
 }
 .heroFlex{
-  max-width: 2000px;
   margin-top:15%;
     display: flex;
     flex-direction: row;
     align-items: center;
+      max-width: 1800px;
+  width: 100%;
 
   
 }
 .left{
   text-align: start;
-  width: 30%;
+  max-width: 600px;
+  flex: 1;
   margin-right: auto;
   align-items: start;
 }
 
 .right{
+  flex: 1;
+  display: flex;
+  justify-content: center;
  margin-left: auto;
 }
 
@@ -73,7 +77,8 @@
 }
 
 .h1{
-  font-size: 5rem;
+  font-size: 4rem;
+
 }
 
 .h1,
@@ -81,7 +86,7 @@
 font{
   color: white;
      font-family: 'IBM Plex Sans', sans-serif;
-     font-weight: 600;
+     font-weight: 500;
 }
 
 .h3{
@@ -92,7 +97,7 @@ margin-top: -2rem;
 .fonth3{
    color: white;
      font-family: 'IBM Plex Sans', sans-serif;
-     font-weight: 400;
+     font-weight: 300;
      font-size: 2rem;
 }
 
@@ -100,33 +105,69 @@ margin-top: -2rem;
    border-radius: 10px;
   border-style: solid;
   box-shadow: inset 1 -3px 3px rgb(85, 85, 56);
-  width: 50rem;
+  width: 100%;
+  max-width: 800px;
+  min-width: 400px;
+  height: auto;
 }
 
 
 .newBlogs{
  height: 40%;
- max-width: 2000px;
+
+}
+@media screen and (max-width:1500px) {
+.Hero{
+  padding-left: 4%;
+}
+.h1{
+font-size: 3rem;
+}
+.h3{
+  font-size: 2rem;
+}
+.heroImage{
+  width: 600px;
+}
+}
+
+
+@media (max-width: 1100px) {
+
+  .heroFlex{
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  margin-top: 30%;
+  }
+
+  .left{
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  .topFlags{
+    justify-content: center;
+  }
+
+  .right{
+    margin-left: 0;
+  }
 }
 
 
 
-@media screen and (min-width: 700px) and (max-width:1100px) {
- .hero{
-
-  margin-top: -15%;
-}
-
-}
 
 
 
 @media screen and (max-width:600px) {
   .Hero{
-
+    background-position:10%;
+    height: 70vh;
     margin-top: -4rem;
    padding-bottom: 0rem;
-   padding-top: 9rem;
+   padding-top: 5rem;
       padding-left: 0px;
   padding-right: 0px;
   }
@@ -137,16 +178,17 @@ margin-top: -2rem;
 
 }
 .heroImage{
-  width: 100%;
-  height: 20rem;
+  width: 90%;
+  height: auto;
+  border-radius: 0;
 }
 .h3{
   margin-top: 1rem;
-  font-size: large;
+  font-size: medium;
 }
 .h1{
  
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .left{
   text-align: center;
@@ -157,10 +199,17 @@ margin-top: -2rem;
 .right{
   padding-top: 4rem;
 }
-.newBlogs{
-  max-width: 100%;
+.workFlag{
+  font-size: medium;
 }
+.rightFlag,
+.leftFlag,
+.font{
+  font-size: small;
+}
+
 .topFlags{
+
 justify-content: center;
 }
 

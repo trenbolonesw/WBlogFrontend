@@ -2,17 +2,18 @@
       padding: 10px;
   display: flex;
   flex-direction: column;
+  flex: 1;
+
 }
 
 
 .articleWrapper{
- padding-bottom: 1rem;
+ padding-bottom: 3rem;
 }
 
 
 .dateWrapper{
-  
-      margin-top: auto;  
+      margin-top: auto;   /* MAGIC LINE */
   display: flex;
   flex-direction: row;
   gap: 4rem;
@@ -21,9 +22,9 @@
 
 .blogTitle{
    
-        font-family: 'Inter',sans-serif;
-        font-size: 22px;
-              font-weight: 700;
+        
+        font-size: medium;
+        font-weight: 700;
 
         
   display: -webkit-box;
@@ -38,7 +39,7 @@
   -webkit-line-clamp: 2;      /* number of lines allowed */
   -webkit-box-orient: vertical;
   overflow: hidden;
-        font-size: 15px;
+        font-size: 12px;
     
           font-weight: 500;
           margin-bottom: 10px;
@@ -63,17 +64,16 @@
 .itemSection {
    
 
-  width: 40%;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   border-radius: 10px;
   font-weight: 500;
   box-sizing: border-box;
   margin: 0;
   align-self: start;   
   text-align: start;
-  cursor: pointer;
 }
 
 
@@ -106,10 +106,12 @@
     width: fit-content;
     color: white;
     background-color: rgb(48, 60, 84);
-    padding: 6px;
+    height: 1%;
+    padding: 3px;
        
     }
 
+    .blogTitle,
   .blogsCategory,
   .blogsDate,
   .blogsArticle,
@@ -117,46 +119,42 @@
             font-family: 'IBM Plex Sans', sans-serif;
           
     }
-    
 
 
-    @media screen and (max-width:600px) {
-
+    @media screen and (max-width:800px) {
 .itemSection {
    
 
-  width: 90%;
+  width: 29%;
   display: flex;
   flex-direction: column;
+  justify-content: end;
   border-radius: 10px;
   font-weight: 500;
   box-sizing: border-box;
   margin: 0;
-  align-self: center;   
+  align-self: start;   
   text-align: start;
-  cursor: pointer;
+}
 }
 
-.dateWrapper{
-      width: 90%;
-}
+    
 
 
-
-
+    @media screen and (max-width:600px) {
         .readMore{
         border-style: none;
       
      
     }
-    
-    .blogTitle{
-        font-size: 20px;
+    .itemSection{
+        align-items: center;
+        justify-content: center;
+        width: 70%;
     }
    
     .blogsArticle{
         font-weight: 400;
-        font-size: 12px;
     }
     .blogsDetails{
         display: flex;
@@ -168,11 +166,15 @@
     }
    
     .blogsDate{
-         
-         font-size: 12px;
+      
+        margin-top: 4px;
+         font-style: italic; 
     }
     .blogsCategory{
         font-weight: 700;
-       margin-top: -1rem;
+    }
+
+    .dateWrapper{
+        width: 90%;
     }
     }

@@ -48,7 +48,6 @@ const [loading,setLoading] = useState<boolean>(false);
   items={data}
   renderLeft={(blog) => (<XLBlogCard blog={blog}/>)} title="Newest Blogs" url={'/blogs'}>
  
-  
  {(blogs) => ( <Blogs blogs={blogs} loading={loading}/> )  } 
  
   </NewestWrapper>

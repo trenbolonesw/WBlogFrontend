@@ -2,9 +2,18 @@
     padding-left: 5rem;
     display: flex;
     flex-direction: row;
-    gap: 2%;
+    gap: 3%;
 }
 
 .C-link{
+    font-size: medium;
+    font-family: 'Imb Plex' sans-serif;
 text-decoration: none;
+}
+
+@media screen and (max-width:600px) {
+    .mini-navbar{
+       padding-left: 2rem;
+     
+    }
 }

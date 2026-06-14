@@ -1,13 +1,13 @@
-import { NavLink, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import './list.css'
 import '../../../Components/blogcomponents/blogs.css'
 import { useState,useEffect } from 'react'
-import BlogWrapper from '../../../Components/blogcomponents/Blog-pages-wrapper'
+import ItemWrapper from '../../../Components/shared/components/UIElements/Item-wrapper'
 import LoadingModal from '../../../Components/modals/LoadingModal'
 import Pagination from '../../../Components/shared/components/Pagination/Pagination'
 import { Blog } from '../../../Types/Blog-Data-types'
 import { useSearchParams } from 'react-router-dom'
-import MiniBlogCard from '../../../Components/blogcomponents/miniblogcard'
+import RegularBlogCard from '../../../Components/blogcomponents/regular-size-card'
 import MiniNavBar from '../../../Components/shared/components/Navigation/MiniNavBar'
 
 export default function CategoriesList(){
@@ -63,7 +63,7 @@ const currentPage = Number(searchParams.get("page") || 1 ) -1
 
     return(
         <>
-        <BlogWrapper title={`${categoryName} Blogs`}>
+        <ItemWrapper title={`${categoryName} Blogs`}>
        <MiniNavBar/>
         
            <div className='header-wrapper'>
@@ -74,13 +74,13 @@ const currentPage = Number(searchParams.get("page") || 1 ) -1
             <div className='category-list'>
             {loading && <div className='loading-modal'><LoadingModal/></div> }
       {!loading && blogs?.length > 0 && (
-       <MiniBlogCard Blogs={blogs}/>
+      <RegularBlogCard Blogs={blogs}/>
       )}
          {!loading && blogs?.length === 0 && (<h1>No blogs for this category yet</h1>)}
           
         </div>
  <Pagination searchParams={searchParams} setSearchParams={setSearchParams} pageCount={pageCount}/>
-        </BlogWrapper>
+        </ItemWrapper>
         </>
     )
 }

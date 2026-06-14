@@ -1,7 +1,7 @@
 import './Gallery.css'
 
 import { useEffect, useState } from 'react';
-import BlogWrapper from '../../Components/blogcomponents/Blog-pages-wrapper';
+import ItemWrapper from '../../Components/shared/components/UIElements/Item-wrapper';
 import { Gallary } from '../../Types/Blog-Data-types';
 import ImageSlideShow from '../../Components/gallary-components/ImageSlideShow';
 
@@ -46,12 +46,12 @@ getImages()
     return(
         <>
          
-          <BlogWrapper title="Gallary">          
-            
+          <ItemWrapper description={'A compilation of my Photography, click on an image for full viewing'} title="Gallary">  
+          
                <ImageSlideShow GallaryData={GallaryData}/> 
                 
       
-        </BlogWrapper>  
+        </ItemWrapper>  
         </>
     )
 }

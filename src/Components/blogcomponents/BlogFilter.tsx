@@ -1,6 +1,14 @@
 import './blogfilter.css'
 import Button from "../shared/components/FormElements/Button"
-export default function BlogFilter({handleSearchParams,category}){
+import { SetURLSearchParams } from 'react-router-dom'
+
+
+type blogfilter = {
+    handleSearchParams:SetURLSearchParams 
+    category:string
+}
+
+export default function BlogFilter({handleSearchParams,category}:blogfilter){
 
 
 
@@ -8,21 +16,22 @@ export default function BlogFilter({handleSearchParams,category}){
 
     return(
         <>
-         <Button cssClass={!category ? 'active':''} onClick={() => handleSearchParams(null)}>
+       
+         <Button cssClass={!category ? 'active':'normal'} onClick={() => handleSearchParams(undefined)}>
                     All
                 </Button>
                   <Button 
-                  cssClass={category === 'Exploration' ? 'active':''}
+                  cssClass={category === 'Exploration' ? 'active':'normal'}
                   onClick={() =>
                     handleSearchParams('Exploration')
                 }>
                     Exploration
                 </Button>
-                <Button cssClass={category === "Photography" ? 'active':''} onClick={() => handleSearchParams('Photography')}>
+                <Button cssClass={category === "Photography" ? 'active':'normal'} onClick={() => handleSearchParams('Photography')}>
                     Photography
                 </Button>
                 <Button
-                cssClass={category === "History" ? 'active':''}
+                cssClass={category === "History" ? 'active':'normal'}
                 onClick={() => handleSearchParams('History')}>
                 History
                 </Button>

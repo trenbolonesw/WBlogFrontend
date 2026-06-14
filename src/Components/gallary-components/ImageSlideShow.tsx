@@ -37,6 +37,7 @@ export default function ImageSlideShow({GallaryData}:SlideProps){
                     }} open={open} slides={slides} close={() => setOpen(false)}
                   index={index}
                     />
+                     
                     <Images gallary={GallaryData} onclick={(index) => openGallary(index)}/>
                     
         </>

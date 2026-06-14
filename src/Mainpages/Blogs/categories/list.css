@@ -32,14 +32,6 @@
 
 
 
-.list-container{
-  
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-right: 1.1rem;
-   
-}
 
 .blog-link{
 
@@ -52,8 +44,6 @@
 }
 
 @media screen and (min-width:700px),(max-width:1100px) {
-    .list-container{
-        padding-left: 1.5rem;
-    }
+ 
 }
 

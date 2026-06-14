@@ -130,6 +130,7 @@ justify-content: center;
 .Link.active,
 .Link:hover
 {
+   font-size: 1.3rem;
     color: rgb(34, 88, 236);
    border-radius: 10px;
    transition:  0.3s ease-in, color 0.3s ease-in ;

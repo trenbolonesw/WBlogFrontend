@@ -13,7 +13,7 @@ export default function LandingPage(){
                       <div className={styles.leftFlag}>Photography</div>
                         <div className={styles.rightFlag}>Exploring</div>
                      </div>
-                     <h1 className={styles.h1}>blog name</h1>
+                     <h1 className={styles.h1}>Riley Waldner Photography</h1>
                      <h3 className={styles.h3}>My personal Photography and Blogs for all to see</h3>
                      <Link to={'/Gallery'} className={styles.workFlag}>See my work</Link>
                     </div>
@@ -22,9 +22,11 @@ export default function LandingPage(){
                     </div>
                  </div>  
             </section>
+        
             <section className={styles.newBlogs}>
          <NewestBlogs/>
             </section>
+                 <div className={styles.line}></div>
             <section className={styles.newGallary}>
           <NewestGallary/>
             </section>

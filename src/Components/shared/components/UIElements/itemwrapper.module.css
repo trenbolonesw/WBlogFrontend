@@ -7,8 +7,18 @@ margin-bottom:5% ;
 }
 
 .headerWrapper{
-     margin-left: 3rem;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
+
 }
+
+.h3Title{
+  font-size: 4rem;
+}
+
+.h3Gallary{
+  font-weight: 500;
+  font-size: medium;
+}
+

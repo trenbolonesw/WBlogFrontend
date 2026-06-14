@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import styles from './miniblogcard.module.css'
+import styles from './regularblogcard.module.css'
 import { Blog } from "../../Types/Blog-Data-types"
 import './blogitem'
 import { DateFormatter } from "../shared/utils/dateFormater"
@@ -8,7 +8,7 @@ interface BlogItem{
 Blogs:Blog[]
 }
 
-export default function MiniBlogCard({Blogs}:BlogItem){
+export default function RegularBlogCard({Blogs}:BlogItem){
 
 
 

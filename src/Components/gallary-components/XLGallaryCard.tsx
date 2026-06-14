@@ -1,6 +1,6 @@
 import { Gallary } from "../../Types/Blog-Data-types"
 import styles from '../blogcomponents/xlblogcard.module.css'
-import { Link } from "react-router-dom"
+
 import { DateFormatter } from "../shared/utils/dateFormater"
 type GalleryItems = {
     Gallary:Gallary;
@@ -32,9 +32,10 @@ export default function XLGallaryCard({onClick,Gallary}:GalleryItems){
            </div>
              
              <div className={styles.dateWrapper}>
-              <span className={styles.blogsDate}>{DateFormatter(Gallary.created_at)}</span>
-              
+                 
                <div className={styles.blogsCategory}>{Gallary.category}</div>
+              <span className={styles.blogsDate}>{DateFormatter(Gallary.created_at)}</span>
+           
                </div>
             
               </div>

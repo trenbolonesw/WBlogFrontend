@@ -1,14 +1,13 @@
 
 import './allblogs.css'
 import { useEffect, useState } from 'react'
-import {  useNavigate } from 'react-router-dom'
-import BlogWrapper from '../../Components/blogcomponents/Blog-pages-wrapper'
+import ItemWrapper from '../../Components/shared/components/UIElements/Item-wrapper'
 import { useSearchParams } from 'react-router-dom'
-import ReactPaginate from 'react-paginate'
 import BlogFilter from '../../Components/blogcomponents/BlogFilter'
 import Blogs from '../../Components/blogcomponents/blogs'
 import { Blog } from '../../Types/Blog-Data-types'
 import Pagination from '../../Components/shared/components/Pagination/Pagination'
+import RegularBlogCard from '../../Components/blogcomponents/regular-size-card'
 export default function AllBlogs(){
     
     const API_URL_BLOGS = import.meta.env.VITE_ALL_BLOGS_URL 
@@ -43,23 +42,6 @@ const [pageCount,setPageCount] = useState<number>(0)
     }
 
 
-      
-
-
-  type PageClickEvent = {
-    selected:number
-  }
-
-       function handlePageClick(e:PageClickEvent){
-
-                const currentParams = Object.fromEntries(searchParams.entries());
-                setSearchParams({
-                  ...currentParams,
-                  page: (e.selected + 1).toString()
-                })
-              
-                
-       }
 
  useEffect(() => {
           async function getBlogs(){
@@ -102,15 +84,15 @@ const [pageCount,setPageCount] = useState<number>(0)
    
     return(
         <>
-            <BlogWrapper title="All Blogs">
+            <ItemWrapper title="All Blogs">
                 <BlogFilter category={category}  handleSearchParams={handleCategory}/>
                     
                   <Pagination searchParams={searchParams} setSearchParams={setSearchParams} pageCount={pageCount}/>
                     
-                    
-                       <Blogs loading={loading} blogs={data}/> 
-                     
-        </BlogWrapper>
+                   <div className='allBlogs'>
+                       <RegularBlogCard Blogs={data}/>
+                     </div>
+        </ItemWrapper>
 
         </>
     )

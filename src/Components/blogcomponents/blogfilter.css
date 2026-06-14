@@ -1,3 +1,18 @@
 .active{
     color: blue;
 }
+.active,
+.filter-button{
+    font-size: medium;
+}
+.normal{
+    font-size: medium;
+}
+
+@media screen and (max-width:600px) {
+    .normal,
+    .active,
+.filter-button{
+    font-size: small;
+}
+}

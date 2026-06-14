@@ -38,9 +38,10 @@ export default function XLBlogCard({blog}:BlogItems){
            </div>
              
              <div className={styles.dateWrapper}>
+               <div className={styles.blogsCategory}>{blog.category}</div>
               <span className={styles.blogsDate}>{DateFormatter(blog.created_at)}</span>
               
-               <div className={styles.blogsCategory}>{blog.category}</div>
+              
                </div>
             
               </div>
